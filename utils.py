@@ -4,7 +4,7 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain import FAISS
 from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
-from langchain.chat_model import ChatOpenAI
+from langchain.chat_models import ChatOpenAI
 from langchain.callbacks import get_openai_callback
 from pypdf import PdfReader
 
@@ -36,7 +36,7 @@ def summarizer(pdf):
 
     # load question answering chain
     query= "Summarize the document in 3-5 sentences."
-    llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo-16k", chain_type="stuff")
+    llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo-16k")
 
     if knowledge_base is not None:
         docs = knowledge_base.similarity_search(query)
