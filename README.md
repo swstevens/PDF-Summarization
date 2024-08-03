@@ -2,6 +2,12 @@
 
 This Python script creates a simple web portal using Streamlit to summarize PDF documents.
 
+### Note
+Within a .env file, you must provide your own OPENAI_API_KEY, with the syntax as follows:
+```
+OPENAI_API_KEY={key}
+```
+
 ## Features
 
 - Upload PDF files
@@ -11,10 +17,12 @@ This Python script creates a simple web portal using Streamlit to summarize PDF 
 
 ## Requirements
 
-- Python 3.7+
-- Streamlit
-- PyPDF2
-- NLTK
+-streamlit
+-langchain
+-pypdf
+-openai
+-python-dotenv
+-tik-token
 
 ## Installation
 
